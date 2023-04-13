@@ -493,62 +493,23 @@ local primary_var_list `population_var_list' i.year_x#i.utility#c.(tmmx tmmn pr 
 local all_var_list  `primary_var_list' i.year_x#i.utility#c.(bi erc pet etr fm100 fm1000)
 
 logit ignition_or_psps `community_var_list', vce(robust)
-predict phat
-predict ihat, xb
-predict error, stdp
-generate lb = ihat - invnormal(0.975)*error
-generate ub = ihat + invnormal(0.975)*error
-generate plb = invlogit(lb)
-generate pub = invlogit(ub)
 eststo ignition_community_
 
-save /nobackup1/vilgalys/data/ignition_prob/aggregate_linear_community_psps_1, replace 
-drop phat ihat error lb ub plb pub 
-
 logit ignition_or_psps `population_var_list', vce(robust)
-predict phat
-predict ihat, xb
-predict error, stdp
-generate lb = ihat - invnormal(0.975)*error
-generate ub = ihat + invnormal(0.975)*error
-generate plb = invlogit(lb)
-generate pub = invlogit(ub)
 eststo ignition_population_
 estadd loc Population "X"
 
-save /nobackup1/vilgalys/data/ignition_prob/aggregate_linear_population_psps_1, replace 
-drop phat ihat error lb ub plb pub 
-
 logit ignition_or_psps `primary_var_list', vce(robust) ltolerance(1e-5) nonrtolerance
-predict phat
-predict ihat, xb
-predict error, stdp
-generate lb = ihat - invnormal(0.975)*error
-generate ub = ihat + invnormal(0.975)*error
-generate plb = invlogit(lb)
-generate pub = invlogit(ub)
 eststo ignition_primary_
 estadd loc Population "X"
 estadd loc Primary "X"
 
-save /nobackup1/vilgalys/data/ignition_prob/aggregate_linear_primary_psps_1, replace 
-drop phat ihat error lb ub plb pub 
 
 logit ignition_or_psps `all_var_list', vce(robust) ltolerance(1e-5) nonrtolerance
-predict phat
-predict ihat, xb
-predict error, stdp
-generate lb = ihat - invnormal(0.975)*error
-generate ub = ihat + invnormal(0.975)*error
-generate plb = invlogit(lb)
-generate pub = invlogit(ub)
 eststo ignition_all_
 estadd loc Population "X"
 estadd loc Primary "X"
 estadd loc Derived "X"
-
-save /nobackup1/vilgalys/data/ignition_prob/aggregate_linear_all_psps_1, replace 
-drop phat ihat error lb ub plb pub 
 
 esttab ignition* using /pool001/vilgalys/inferring_expectations/outputs/regressions/aggregate_logistic_regression_ignition_psps_1.tex, se keep(socio sens) pr2 scalars(Population Primary Derived) label collabels(none) unstack nomtitles replace nomtitles nodepvar 
 esttab ignition* using /pool001/vilgalys/inferring_expectations/outputs/regressions/aggregate_logistic_regression_ignition_psps_1.csv, replace wide plain se keep(socio sens) pr2 scalars(Population Primary Derived)
