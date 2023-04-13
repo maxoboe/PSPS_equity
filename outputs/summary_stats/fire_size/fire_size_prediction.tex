@@ -1,0 +1,10 @@
+\begin{tabular}{lccccccc}
+\toprule
+{} & Regression & \multicolumn{2}{c}{Fire size $\geq$ 300 acres} & \multicolumn{2}{c}{Fire size $\geq$ 500 acres} & \multicolumn{2}{c}{Fire size $\geq$ top 2\%} \\
+{} &  R squared &            Specificity & Sensitivity &            Specificity & Sensitivity &         Specificity & Sensitivity \\
+\midrule
+Linear            &    0.06311 &                 0.6907 &      0.6455 &                 0.7017 &      0.6624 &              0.6691 &      0.6115 \\
+Linear Interacted &    0.08927 &                  0.723 &      0.6612 &                 0.7302 &      0.6893 &              0.6888 &      0.6271 \\
+Random Forest     &    0.08446 &                0.02007 &      0.9994 &                0.01766 &      0.9994 &             0.02622 &      0.9991 \\
+\bottomrule
+\end{tabular}

@@ -1,0 +1,24 @@
+{
+\def\sym#1{\ifmmode^{#1}\else\(^{#1}\)\fi}
+\begin{tabular}{l*{9}{c}}
+\hline\hline
+                    &\multicolumn{1}{c}{(1)}         &\multicolumn{1}{c}{(2)}         &\multicolumn{1}{c}{(3)}         &\multicolumn{1}{c}{(4)}         &\multicolumn{1}{c}{(5)}         &\multicolumn{1}{c}{(6)}         &\multicolumn{1}{c}{(7)}         &\multicolumn{1}{c}{(8)}         &\multicolumn{1}{c}{(9)}         \\
+                    &    ignition         &    ignition         &    ignition         &    ignition         &    ignition         &    ignition         &    ignition         &    ignition         &    ignition         \\
+\hline
+Health Index        &     0.00144         &     -0.0119\sym{***}&      0.0179\sym{***}&     0.00460\sym{*}  &     -0.0117\sym{***}&      0.0133\sym{**} &     0.00889\sym{***}&     -0.0137\sym{***}&     0.00860         \\
+                    &   (0.00155)         &  (0.000769)         &   (0.00430)         &   (0.00187)         &  (0.000776)         &   (0.00461)         &   (0.00207)         &  (0.000871)         &   (0.00553)         \\
+[1em]
+SES Index           &     0.00298         &      0.0167\sym{***}&      0.0205\sym{***}&     0.00178         &      0.0166\sym{***}&      0.0224\sym{***}&    -0.00362         &      0.0125\sym{***}&      0.0137\sym{***}\\
+                    &   (0.00180)         &  (0.000759)         &   (0.00404)         &   (0.00182)         &  (0.000761)         &   (0.00376)         &   (0.00200)         &  (0.000924)         &   (0.00409)         \\
+\hline
+Observations        &     3120696         &     9879282         &     1867158         &     3120696         &     9879282         &     1867158         &     3120696         &     9879282         &     1846371         \\
+Pseudo \(R^{2}\)    &       0.007         &       0.007         &       0.013         &       0.008         &       0.007         &       0.019         &       0.052         &       0.060         &       0.086         \\
+Utility             &         SCE         &       PG\&E         &      SDG\&E         &         SCE         &       PG\&E         &      SDG\&E         &         SCE         &       PG\&E         &      SDG\&E         \\
+Population          &                     &                     &                     &           X         &           X         &           X         &           X         &           X         &           X         \\
+Primary             &                     &                     &                     &                     &                     &                     &           X         &           X         &           X         \\
+Derived             &                     &                     &                     &                     &                     &                     &           X         &           X         &           X         \\
+\hline\hline
+\multicolumn{10}{l}{\footnotesize Standard errors in parentheses}\\
+\multicolumn{10}{l}{\footnotesize \sym{*} \(p<0.05\), \sym{**} \(p<0.01\), \sym{***} \(p<0.001\)}\\
+\end{tabular}
+}

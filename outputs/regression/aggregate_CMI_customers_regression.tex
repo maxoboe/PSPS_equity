@@ -1,0 +1,23 @@
+{
+\def\sym#1{\ifmmode^{#1}\else\(^{#1}\)\fi}
+\begin{tabular}{l*{8}{c}}
+\hline\hline
+                    &\multicolumn{1}{c}{(1)}&\multicolumn{1}{c}{(2)}&\multicolumn{1}{c}{(3)}&\multicolumn{1}{c}{(4)}&\multicolumn{1}{c}{(5)}&\multicolumn{1}{c}{(6)}&\multicolumn{1}{c}{(7)}&\multicolumn{1}{c}{(8)}\\
+                    &\multicolumn{1}{c}{Log CMI}&\multicolumn{1}{c}{Log CMI}&\multicolumn{1}{c}{Log CMI}&\multicolumn{1}{c}{Log CMI}&\multicolumn{1}{c}{Log Cust}&\multicolumn{1}{c}{Log Cust}&\multicolumn{1}{c}{Log Cust}&\multicolumn{1}{c}{Log Cust}\\
+\hline
+Health Index        &     -0.0167\sym{***}&     -0.0179\sym{***}&     -0.0123\sym{***}&     -0.0119\sym{***}&     -0.0134\sym{***}&     -0.0146\sym{***}&     -0.0106\sym{***}&    -0.00958\sym{***}\\
+                    &   (0.00198)         &   (0.00210)         &   (0.00235)         &   (0.00248)         &   (0.00184)         &   (0.00195)         &   (0.00216)         &   (0.00228)         \\
+[1em]
+SES Index           &      0.0138\sym{***}&      0.0139\sym{***}&     0.00992\sym{***}&      0.0103\sym{***}&     0.00957\sym{***}&     0.00979\sym{***}&     0.00544\sym{*}  &     0.00513         \\
+                    &   (0.00254)         &   (0.00260)         &   (0.00287)         &   (0.00297)         &   (0.00237)         &   (0.00244)         &   (0.00270)         &   (0.00282)         \\
+\hline
+Observations        &        3270         &        3270         &        3270         &        3270         &        3270         &        3270         &        3270         &        3270         \\
+\(R^{2}\)           &       0.164         &       0.169         &       0.301         &       0.343         &       0.098         &       0.104         &       0.227         &       0.257         \\
+Population          &                     &           X         &           X         &           X         &                     &           X         &           X         &           X         \\
+Primary             &                     &                     &           X         &           X         &                     &                     &           X         &           X         \\
+Derived             &                     &                     &                     &           X         &                     &                     &                     &           X         \\
+\hline\hline
+\multicolumn{9}{l}{\footnotesize Standard errors in parentheses}\\
+\multicolumn{9}{l}{\footnotesize \sym{*} \(p<0.05\), \sym{**} \(p<0.01\), \sym{***} \(p<0.001\)}\\
+\end{tabular}
+}

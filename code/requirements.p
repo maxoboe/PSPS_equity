@@ -1,0 +1,15 @@
+pandas
+geopandas
+matplotlib
+colour
+scikit-learn
+scipy
+jupyter
+ipykernel
+numpy
+descartes
+autograd
+seaborn
+pandarallel
+netCDF4
+doubleml
