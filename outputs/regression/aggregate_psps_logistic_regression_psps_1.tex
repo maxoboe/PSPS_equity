@@ -1,0 +1,23 @@
+{
+\def\sym#1{\ifmmode^{#1}\else\(^{#1}\)\fi}
+\begin{tabular}{l*{4}{c}}
+\hline\hline
+                    &\multicolumn{1}{c}{(1)}         &\multicolumn{1}{c}{(2)}         &\multicolumn{1}{c}{(3)}         &\multicolumn{1}{c}{(4)}         \\
+                    &        psps         &        psps         &        psps         &        psps         \\
+\hline
+Health Index        &    -0.00688\sym{***}&    -0.0077\sym{***}&    -0.00616\sym{***}         &    -0.00712\sym{***}\\
+                    &  (0.000534)         &  (0.000573)         &   (0.000611)         &   (0.000619)         \\
+[1em]
+SES Index           &     0.00934\sym{***}&     0.0100\sym{***}&    0.00318\sym{***}&    0.00419\sym{***} \\
+                    &  (0.000541)         &  (0.000546)         &   (0.000663)         &   (0.000686)         \\
+\hline
+Observations        &     14925285         &     14925285         &     14896358         &     14896358         \\
+Pseudo \(R^{2}\)    &       0.031         &       0.034         &       0.159         &       0.183         \\
+Population          &                     &           X         &           X         &           X         \\
+Primary             &                     &                     &           X         &           X         \\
+Derived             &                     &                     &                     &           X         \\
+\hline\hline
+\multicolumn{5}{l}{\footnotesize Standard errors in parentheses}\\
+\multicolumn{5}{l}{\footnotesize \sym{*} \(p<0.05\), \sym{**} \(p<0.01\), \sym{***} \(p<0.001\)}\\
+\end{tabular}
+}
